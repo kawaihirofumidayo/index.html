@@ -1,24 +1,41 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>ぶたちゃんずの紹介</title>
-</head>
-<body>
-	<h1>にぽぽのプロフィール</h1>
-	<table border="1" style="width:400">
-	<tr bgcolor="silver">
-	<th>写真</th><th>プロフィール</th>
-	</tr>
-	<tr>
-	<td><img src="https://previews.123rf.com/images/dazdraperma/dazdraperma1711/dazdraperma171100010/89881688-%E3%81%8B%E3%82%8F%E3%81%84%E3%81%84%E3%83%96%E3%82%BF%E3%81%AE%E3%82%A4%E3%83%A9%E3%82%B9%E3%83%88.jpg" width="75" height="100" alt="綾部めぐみの写真"></td>
-	<td>
-	<p>ふむが大好きなにぽぽ族の戦士
-	<br>口癖は「クレープくいて」</br>
-	</td>
-	</tr>
-	</table>
-	<hr>
-	<a href="memberList.html">一覧へ戻る</a>
-	</body>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-W5QD44F');</script>
+    <!-- End Google Tag Manager -->
+<style>
+#overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 2;
+    cursor: pointer;
+}
+</style>
+</head><body>
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W5QD44F"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+<div id="overlay" onclick="off()"><h1>Hay</h1></div>
+<button onclick="on()">Turn on overlay effect</button><script>
+function on() {
+    document.getElementById("overlay").style.display = "block";
+}function off() {
+    document.getElementById("overlay").style.display = "none";
+}
+</script>  
+</body>
 </html>
