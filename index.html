@@ -1,14 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-189035330-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'UA-189035330-1');
-</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -16,7 +9,6 @@
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-W5QD44F');</script>
     <!-- End Google Tag Manager -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 #overlay {
     position: fixed;
@@ -38,10 +30,9 @@
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
 <div id="overlay" onclick="off()">
-<img src="https://nd.natureasia.com/figure/7026/99254/phone/1" alt="「教えて! goo for OCN」は、お客様同士で疑問を解決できるQ&amp;Aコミュニティサイトの画像"  class="aligncenter">
+    <img src="https://nd.natureasia.com/figure/7026/99254/phone/1" alt="「教えて! goo for OCN」は、お客様同士で疑問を解決できるQ&amp;Aコミュニティサイトの画像"  class="aligncenter">
 </div>
-<button>Turn on overlay effect</button>
-    <script>
+<button onclick="on()">Turn on overlay effect</button><script>
 function on() {
     document.getElementById("overlay").style.display = "block";
 }function off() {
