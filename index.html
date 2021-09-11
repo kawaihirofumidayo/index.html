@@ -42,6 +42,131 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link rel="stylesheet" href="css/queries.css">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">    
 </head>
+/*--------------------------------------
+  モーダル表示上から_002
+--------------------------------------*/
+.modal_wrap input {
+  display: none;
+}
+
+.modal_overlay {
+  display: flex;
+  justify-content: center;
+  overflow: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  transition: opacity 0.5s, transform 0s 0.5s;
+  transform: scale(0);
+}
+
+.modal_trigger {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.modal_content {
+  align-self: flex-start;
+  width: 60%;
+  padding: 30px 30px 15px;
+  box-sizing: border-box;
+  background: #fff;
+  line-height: 1.4em;
+  top: 20%;
+  transform: translateY(-60%);
+  transition: 0.5s;
+}
+
+.modal_content p {
+  padding-top: 0;
+}
+
+.close_button {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.modal_wrap input:checked ~ .modal_overlay {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 0.5s;
+}
+
+.modal_wrap input:checked ~ .modal_overlay .modal_content {
+  transform: translateY(20px);
+}
+
+.open_button {
+   color: #4f96f6;
+    background-color: #eeeeee;
+    font-weight: bold;
+    text-align: center;
+    cursor :pointer;
+    transition: all 0.3s;
+    display: block;
+    margin-top: 40px;
+    margin-bottom: 1px;
+    padding: 12px 2px;
+    max-width:300px;
+    text-decoration: none;
+}
+
+.open-button:active {
+  /*ボタンを押したとき*/
+  -webkit-transform: translateY(2px);
+  transform: translateY(2px);/*下に動く*/
+
+}
+
+/*アイコンを表示*/
+.open-button:after {
+font-family: "Font Awesome 5 Free";
+  content: "\f2d0";
+    padding-left: 8px;
+}
+
+/*ラベルホバー時*/
+.open-button:hover {
+  color: #FFFFFF;
+  background-color: #4f96f6;
+  transition: .6s;
+}
+
+.modal_title2 {
+  font-size: 1.5em;
+	position: relative;
+	overflow: hidden;
+  padding-bottom: 10px;
+  margin-top:0;
+  margin-bottom: 0;
+}
+
+.modal_title2::before,
+.modal_title2::after{
+	content: "";
+	position: absolute;
+	bottom: 0;
+}
+
+/* h2 プライマリカラー*/
+.modal_title2:before{
+	border-bottom: 4px solid #6bb6ff;
+	width: 100%;
+}
+/* h2 セカンダリカラー*/
+.modal_title2:after{
+	border-bottom: 4px solid #c8e4ff;
+	width: 100%;
+}
 <body>
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PGLPFVF"
@@ -59,5 +184,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="icon"><img src="https://ton-log.com/wp-content/uploads/2019/07/free-icon.png" alt="イメージ画像" class="icon_bcc"></div>
         <p>bubknj</p></a>
 </li>
+<center>
+<a href="#modal-01" class="modal-button">
+モーダルを表示 
+</a>
+</center>
+<div class="modal-wrapper" id="modal-01">
+  <a href="#!" class="modal-overlay"></a>
+  <div class="modal-window">
+    <div class="modal-content">
+      <p class="modal_title">モーダルの中身</p>
+      <p>
+ああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ
+      </p>
+      <p>
+ああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ
+      </p>
+    </div>
+    <a href="#!" class="modal-close"><i class="far fa-times-circle"></i></a>
+  </div>
+</div>
 </body>
 </html>
